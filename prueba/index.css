@@ -1,0 +1,224 @@
+body{
+    height: 100%;
+    width: 100%;    
+    padding: 20vh 0 0 0;
+    margin: 0;
+}
+header{
+    height: 20vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+nav{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    background-color: aqua;
+}
+nav ul{
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+nav ul li{
+    height: 50%;
+    width: calc(80%/3);
+    background-color: black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+nav ul li a{
+    text-decoration: none;
+    font-family: sans-serif;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+nav ul li a:hover{
+    color: white;
+    background-color: black;
+    transition: 0.2s;
+}
+
+/*Cabecera de la pagina web section 1*/
+.cabecera{
+    width: 100%;
+    height: calc(100vh - 20vh);
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+.cabecera div{
+    position: absolute;
+    width: 40%;
+    height: 20%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: lightgray;
+}
+.cabecera div h1,p{
+    font-family: sans-serif;
+    margin: 0 0 0 15px;
+    padding: 0;
+}
+.cabecera img{
+    z-index: -1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.sobre_nosaltres{
+    width: 100%;
+    height: 80vh;
+    background-color: antiquewhite;
+}
+.partone{
+    width: 100%;
+    height: calc(100%/2);
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.image_partone{
+    width: 20%;
+    height: 80%;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.text_partone{
+    width: 70%;
+    height: 80%;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.text_partone p{
+    padding: 20px;
+}
+.parttwo{
+    width: 100%;
+    height: calc(100%/2);
+    background-color: azure;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.image_parttwo{
+    width: 20%;
+    height: 80%;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.text_parttwo{
+    width: 70%;
+    height: 80%;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.text_parttwo p{
+    padding: 30px;
+}
+.carta{
+    width: 100%;
+    height: 200vh;
+    background-color: blue;
+}
+.galeria_de_imagenes{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.filauno,.filados{
+    width: 100%;
+    height: calc(100%/2);
+    background-color: brown;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery_img{
+    background-color: blue;
+    width: calc(80%/4);
+    height: 80%;
+    border: 4px solid white;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.prueba2{
+    width: 100%;
+    height: 100vh;
+    background-color: red;
+}

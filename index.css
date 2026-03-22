@@ -1,0 +1,459 @@
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header{
+    background-color: black;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+nav{
+    width: 40%;
+    height: 100%;
+    margin-right: 10px;
+}
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+nav ul li{
+    background-color: aliceblue;
+    width: calc(90%/3);
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    overflow: hidden;
+}
+nav ul li a{
+    color: blue;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav ul li a:hover{
+    background-color: red;
+    width: 100%;
+    height: 100%;
+}
+/*Cabecera de la pagina web section 1*/
+.cabecera{
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+}
+.cabecera div{
+    position: absolute;
+    width: 40%;
+    height: 20%;
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: lightgray;
+}
+.cabecera div h1,p{
+    font-family: sans-serif;
+    margin: 0 0 0 15px;
+    padding: 0;
+}
+.cabecera img{
+    z-index: -1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.btn-reservar {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    background-color: #e63946;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+
+    z-index: 1000;
+}
+
+.btn-reservar:hover {
+    background-color: #c1121f;
+}
+/*Sobre nosotros de la pagina web section 2*/
+.sobre_nosaltres{
+    width: 100%;
+    height: calc(100vh - 100px);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.partone{
+    box-sizing: border-box;
+    width: calc(90% - 20px);
+    height: calc(80%/2);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.image_partone{
+    min-width: 20%;
+    min-height: 80%;
+    max-width: 20%;
+    max-height: 80%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+.image_partone img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.text_partone{
+    min-width: 50%;
+    min-height: 80%;
+    max-width: 80%;
+    max-height: 80%;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.text_partone p{
+    padding: 20px;
+}
+.parttwo{
+    width: calc(90% - 20px);
+    height: calc(80%/2);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.image_parttwo{
+    width: 20%;
+    height: 80%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+.image_parttwo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.text_parttwo{
+    width: 80%;
+    height: 80%;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.text_parttwo p{
+    padding: 30px;
+}
+/*SECTION 3*/
+.seccio-carta {
+    width: 90%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+.grid-wrapper {
+    display: grid;
+    width: 100%;
+    gap: 20px;
+    grid-template-columns: 140px 1fr 1fr;
+    
+    grid-template-areas:
+        "title title title"
+        "main-btn main-btn main-btn"
+        "side1 desc1 desc1"
+        "side1 img1 img2"
+        "side2 desc2 desc2"
+        "side2 img3 img4";
+}
+
+.titol-carta { grid-area: title; font-size: 24px; font-weight: bold; }
+
+.banner-menu { 
+    grid-area: main-btn; 
+    border: 1px solid #000; 
+    border-radius: 12px; 
+    padding: 20px; 
+    text-align: center; 
+    font-size: 28px;
+    background-color: #fcfcfc;
+}
+
+.side-1 { grid-area: side1; }
+.side-2 { grid-area: side2; }
+
+.sidebar {
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-weight: 500;
+}
+
+.text-1 { grid-area: desc1; }
+.text-2 { grid-area: desc2; }
+
+.text-contingut h3 { margin-bottom: 8px; font-size: 1.2rem; }
+.text-contingut p { font-size: 0.95rem; line-height: 1.5; color: #444; }
+
+.targeta {
+    grid-area: auto;
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    height: 180px; 
+    margin: 0;
+}
+
+.targeta img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover; 
+    display: block;
+}
+
+.targeta figcaption {
+    height: 20%;
+    text-align: center;
+    border-top: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    background-color: #776d6d;
+}
+
+.card-pasta { grid-area: img1; }
+.card-entrants { grid-area: img2; }
+.card-amanida { grid-area: img3; }
+.card-peix { grid-area: img4; }
+/*Galeria de la pagina web section 4*/
+.galeria_de_fotos{
+    min-width: 100%;
+    min-height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.image_container{
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.image_container .image{
+    width: 300px;
+    height: 200px;    
+    border: 5px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+} 
+.image_container .image.fosca{
+    filter: brightness(80%);
+}
+.image_container .image img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+.image_container .image:hover{
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;    
+    filter: brightness(60%);
+    transition: all 0.3s ease-in-out;
+}
+/*Formulario section 5*/
+.formulari {
+    padding: 30px;
+    width: 90%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+
+.formulari form {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+}
+
+.formulari form div {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 10px);
+}
+
+
+.formulari label {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.formulari input,
+.formulari textarea {
+    padding: 8px;
+    border: 1px solid #333;
+    font-size: 14px;
+}
+.formulari textarea {
+    width: 90%;
+}
+.form_message {
+    width: 100%;
+}
+
+.form_submit {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form_submit button {
+    padding: 8px 20px;
+    border: 1px solid #333;
+    background-color: #eee;
+}
+
+.form_submit button:hover {
+    background-color: #ccc;
+}
+/*Footer section 6*/
+footer{ 
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color : white;
+}
+.footer_container{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.footer_partone{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 20px
+}
+.footer_contactemail{
+    width: 300px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.footer_contactphone{
+    width: 300px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+}
+.footer_image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.footer_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
