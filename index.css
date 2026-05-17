@@ -1,4 +1,3 @@
-
 *{
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -14,6 +13,7 @@ body{
     justify-content: center;
     align-items: center;
 }
+
 header{
     background-color: black;
     width: 100%;
@@ -24,7 +24,14 @@ header{
     position: sticky;
     top: 0;
     z-index: 2;
+    transition: height 0.3s ease, background-color 0.3s ease, padding 0.3s ease;
 }
+header.header-petit {
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 5px 0;
+}
+
 nav{
     width: 40%;
     height: 100%;
@@ -40,7 +47,6 @@ nav ul{
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    
 }
 nav ul li{
     background-color: aliceblue;
@@ -69,6 +75,7 @@ nav ul li a:hover{
     width: 100%;
     height: 100%;
 }
+
 /*Cabecera de la pagina web section 1*/
 .cabecera{
     width: 100%;
@@ -79,7 +86,8 @@ nav ul li a:hover{
     align-items: center;
     position: relative;
 }
-.cabecera div{
+
+.cabecera-text{
     position: absolute;
     width: 40%;
     height: 20%;
@@ -88,8 +96,34 @@ nav ul li a:hover{
     flex-direction: column;
     justify-content: center;
     background-color: lightgray;
+    animation: text-entrada 2.5s ease-out forwards;
 }
-.cabecera div h1,p{
+
+@keyframes text-entrada {
+    0% {
+        opacity: 0;
+        transform: translateY(60px);
+        color: orange;
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(30px);
+        color: orange;
+    }
+    75% {
+        opacity: 0.8;
+        transform: translateY(10px);
+        color: rgb(255, 160, 50);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        color: white;
+    }
+}
+
+.cabecera-text h1,
+.cabecera-text p{
     font-family: sans-serif;
     margin: 0 0 0 15px;
     padding: 0;
@@ -106,20 +140,18 @@ nav ul li a:hover{
     position: fixed;
     bottom: 20px;
     right: 20px;
-
     background-color: #e63946;
     color: white;
     padding: 15px 25px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
-
     z-index: 1000;
 }
-
 .btn-reservar:hover {
     background-color: #c1121f;
 }
+
 /*Sobre nosotros de la pagina web section 2*/
 .sobre_nosaltres{
     width: 100%;
@@ -172,7 +204,6 @@ nav ul li a:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
 .text_partone p{
     padding: 20px;
@@ -218,7 +249,8 @@ nav ul li a:hover{
 .text_parttwo p{
     padding: 30px;
 }
-/*SECTION 3*/
+
+/*SECTION 3 - Carta*/
 .seccio-carta {
     width: 90%;
     margin: 40px auto;
@@ -226,13 +258,11 @@ nav ul li a:hover{
     background-color: #ffffff;
     box-sizing: border-box;
 }
-
 .grid-wrapper {
     display: grid;
     width: 100%;
     gap: 20px;
     grid-template-columns: 140px 1fr 1fr;
-    
     grid-template-areas:
         "title title title"
         "main-btn main-btn main-btn"
@@ -241,9 +271,7 @@ nav ul li a:hover{
         "side2 desc2 desc2"
         "side2 img3 img4";
 }
-
 .titol-carta { grid-area: title; font-size: 24px; font-weight: bold; }
-
 .banner-menu { 
     grid-area: main-btn; 
     border: 1px solid #000; 
@@ -253,10 +281,8 @@ nav ul li a:hover{
     font-size: 28px;
     background-color: #fcfcfc;
 }
-
 .side-1 { grid-area: side1; }
 .side-2 { grid-area: side2; }
-
 .sidebar {
     border: 1px solid #000;
     display: flex;
@@ -265,13 +291,10 @@ nav ul li a:hover{
     height: 100%;
     font-weight: 500;
 }
-
 .text-1 { grid-area: desc1; }
 .text-2 { grid-area: desc2; }
-
 .text-contingut h3 { margin-bottom: 8px; font-size: 1.2rem; }
 .text-contingut p { font-size: 0.95rem; line-height: 1.5; color: #444; }
-
 .targeta {
     grid-area: auto;
     border: 1px solid #000;
@@ -280,14 +303,12 @@ nav ul li a:hover{
     height: 180px; 
     margin: 0;
 }
-
 .targeta img {
     width: 100%;
     height: 80%;
     object-fit: cover; 
     display: block;
 }
-
 .targeta figcaption {
     height: 20%;
     text-align: center;
@@ -298,11 +319,11 @@ nav ul li a:hover{
     font-size: 0.85rem;
     background-color: #776d6d;
 }
-
 .card-pasta { grid-area: img1; }
 .card-entrants { grid-area: img2; }
 .card-amanida { grid-area: img3; }
 .card-peix { grid-area: img4; }
+
 /*Galeria de la pagina web section 4*/
 .galeria_de_fotos{
     min-width: 100%;
@@ -325,28 +346,118 @@ nav ul li a:hover{
     overflow: hidden;
     border-radius: 10px;
 }
+
 .image_container .image{
     width: 300px;
     height: 200px;    
     border: 5px solid #ccc;
     border-radius: 10px;
-    overflow: hidden;
+    overflow: hidden; 
     transition: all 0.3s ease-in-out;
-} 
+}
 .image_container .image.fosca{
     filter: brightness(80%);
 }
-.image_container .image img{
+
+.image_container .image img {
     object-fit: cover;
     object-position: center;
     width: 100%;
     height: 100%;
+    transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
 }
+.image_container .image:hover img {
+    transform: scale(1.15) rotate(3deg);
+    filter: grayscale(100%);
+}
+
 .image_container .image:hover{
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;    
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
     filter: brightness(60%);
-    transition: all 0.3s ease-in-out;
+    border-color: #e63946;
+    transition: box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
+
+.sobre_nosaltres h2 {
+    animation: titol-entrada 2s ease-out forwards;
+}
+
+@keyframes titol-entrada {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+        color: #e63946;
+    }
+    33% {
+        opacity: 0.4;
+        transform: translateX(-25px);
+        color: #ff7043;
+    }
+    66% {
+        opacity: 0.8;
+        transform: translateX(-8px);
+        color: #ffa726;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        color: #000000;
+    }
+}
+
+
+.seccio-video {
+    width: 90%;
+    max-width: 100%;
+    margin: 40px auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.seccio-video h2 {
+    align-self: flex-start;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 60%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.video-controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: 6px 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.video-btn {
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    transition: text-shadow 0.2s ease, color 0.2s ease;
+}
+
+.video-btn:hover {
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.9), 0px 0px 20px rgba(255, 255, 255, 0.6);
+    color: #ffe082;
+}
+
 /*Formulario section 5*/
 .formulari {
     padding: 30px;
@@ -355,26 +466,20 @@ nav ul li a:hover{
     font-family: Arial, sans-serif;
     box-sizing: border-box;
 }
-
-
 .formulari form {
     display: flex;
     flex-wrap: wrap; 
     gap: 20px;
 }
-
 .formulari form div {
     display: flex;
     flex-direction: column;
     width: calc(50% - 10px);
 }
-
-
 .formulari label {
     margin-bottom: 5px;
     font-size: 14px;
 }
-
 .formulari input,
 .formulari textarea {
     padding: 8px;
@@ -387,22 +492,20 @@ nav ul li a:hover{
 .form_message {
     width: 100%;
 }
-
 .form_submit {
     width: 100%;
     display: flex;
     justify-content: flex-end;
 }
-
 .form_submit button {
     padding: 8px 20px;
     border: 1px solid #333;
     background-color: #eee;
 }
-
 .form_submit button:hover {
     background-color: #ccc;
 }
+
 /*Footer section 6*/
 footer{ 
     width: 100%;
@@ -411,7 +514,7 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    color : white;
+    color: white;
 }
 .footer_container{
     width: 90%;
@@ -426,7 +529,7 @@ footer{
     flex-direction: row;
     align-items: center;
     justify-content: start;
-    gap: 20px
+    gap: 20px;
 }
 .footer_contactemail{
     width: 300px;
@@ -449,7 +552,6 @@ footer{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 }
 .footer_image img{
     width: 100%;

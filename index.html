@@ -6,11 +6,11 @@
     <title>Restaurant els coberts</title>
     <link rel="stylesheet" href="index.css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <!-- EXERCICI 5: La capçalera s'encongeix amb scroll mitjançant JS -->
+    <header id="main-header">
         <nav>
             <ul>
                 <li><a href="#home">Nosaltres</a></li>
@@ -19,15 +19,17 @@
             </ul>
         </nav>
     </header> 
+
     <section class="cabecera">
-        <div>
+        <!-- EXERCICI 2.1: Animació CSS al text de la capçalera (apareix, puja i canvia de taronja a blanc) -->
+        <div class="cabecera-text">
             <h1>Restaurant els <b>coberts</b></h1>
             <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
         </div>
         <img src="images/wallhaven-gwwkql_1920x1080.png" alt="Alter_img">
         <a href="#formulari" class="btn-reservar">Reservar</a>
-
     </section>  
+
     <section class="sobre_nosaltres">
         <h2>Sobre nosaltres</h2>
         <div class="partone">
@@ -55,6 +57,7 @@
             </div>
         </div>
     </section>
+
     <section class="seccio-carta">
         <div class="grid-wrapper">
             <div class="titol-carta">Carta</div>
@@ -68,43 +71,56 @@
                 <img src="https://images.unsplash.com/photo-1473093226795-af9932fe5856?q=80&w=400&auto=format&fit=crop" alt="Pasta">
                 <figcaption>pasta</figcaption>
             </figure>
-
             <figure class="targeta card-entrants">
                 <img src="https://images.unsplash.com/photo-1541529086128-24ad95c351ef?q=80&w=400&auto=format&fit=crop" alt="Entrants">
                 <figcaption>entrants</figcaption>
             </figure>
-
             <aside class="sidebar side-2">Menú 2</aside>
-            
             <article class="text-contingut text-2">
                 <h3>Contingut</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </article>
-
             <figure class="targeta card-amanida">
                 <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=400&auto=format&fit=crop" alt="Amanida">
                 <figcaption>amanida</figcaption>
             </figure>
-
             <figure class="targeta card-peix">
                 <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?q=80&w=400&auto=format&fit=crop" alt="Peix">
                 <figcaption>peix</figcaption>
             </figure>
         </div>
     </section>
+
     <section class="galeria_de_fotos">
         <h2>Galeria de fotos</h2>
         <div class="image_container">
-            <div class="image fosca"><img src="images/foto1.png" alt="Foto 1" ></div>
+            <div class="image fosca"><img src="images/foto1.png" alt="Foto 1"></div>
             <div class="image"><img src="images/foto1.png" alt="Foto 2"></div>
             <div class="image"><img src="images/foto1.png" alt="Foto 3"></div>
-            <div class="image fosca"><img src="images/foto1.png" alt="Foto 4" ></div>
-            <div class="image fosca"><img src="images/foto1.png" alt="Foto 5" ></div>
+            <div class="image fosca"><img src="images/foto1.png" alt="Foto 4"></div>
+            <div class="image fosca"><img src="images/foto1.png" alt="Foto 5"></div>
             <div class="image"><img src="images/foto1.png" alt="Foto 6"></div>
             <div class="image"><img src="images/foto1.png" alt="Foto 7"></div>
-            <div class="image fosca"><img src="images/foto1.png" alt="Foto 8" ></div>
+            <div class="image fosca"><img src="images/foto1.png" alt="Foto 8"></div>
         </div>
     </section>
+
+    <section class="seccio-video" id="seccio-video">
+        <h2>Vídeos del restaurant</h2>
+        <div class="video-wrapper">
+            <video id="restaurant-video" muted>
+                <source src="images/videoplayback.mp4" type="video/mp4">
+                El teu navegador no suporta l'element de vídeo.
+            </video>
+            <div class="video-controls">
+                <span class="material-icons video-btn" id="btn-play" title="Play">play_circle</span>
+                <span class="material-icons video-btn" id="btn-pause" title="Pausa">pause_circle</span>
+                <span class="material-icons video-btn" id="btn-volume" title="Activar volum">volume_up</span>
+                <span class="material-icons video-btn" id="btn-mute" title="Silenciar">volume_off</span>
+            </div>
+        </div>
+    </section>
+
     <section class="formulari" id="formulari">
         <h2>Reserva</h2>
         <form action="POST" method="post">
@@ -117,8 +133,8 @@
                 <input type="number" id="peoplenumber" name="peoplenumber" required>
             </div>
             <div class="form_date">
-            <label for="date">Data:</label>
-            <input type="date" id="date" name="date" required>
+                <label for="date">Data:</label>
+                <input type="date" id="date" name="date" required>
             </div>
             <div class="form_time">
                 <label for="time">Hora:</label>
@@ -133,6 +149,7 @@
             </div>
         </form>
     </section>
+
     <footer>
         <div class="footer_container">
             <div class="footer_partone">
@@ -145,10 +162,53 @@
                     <p>612202349</p>
                 </div>
             </div>
-            
             <div class="footer_image">
                 <img src="images/footerlogo.jpg" alt="footerlogo">
             </div>
         </div>
     </footer>
+
+    <script>
+        const video    = document.getElementById('restaurant-video');
+        const btnPlay  = document.getElementById('btn-play');
+        const btnPause = document.getElementById('btn-pause');
+        const btnVol   = document.getElementById('btn-volume');
+        const btnMute  = document.getElementById('btn-mute');
+
+        btnPlay.addEventListener('click', function() {
+            video.play();
+        });
+
+        btnPause.addEventListener('click', function() {
+            video.pause();
+        });
+
+        btnVol.addEventListener('click', function() {
+            video.muted = false;
+        });
+
+        btnMute.addEventListener('click', function() {
+            video.muted = true;
+        });
+
+        window.addEventListener('scroll', function() {
+            var header = document.getElementById('main-header');
+            if (window.scrollY > 80) {
+                header.classList.add('header-petit');
+            } else {
+                header.classList.remove('header-petit');
+            }
+        });
+
+        window.addEventListener('scroll', function() {
+            var seccioVideo = document.getElementById('seccio-video');
+            var rect = seccioVideo.getBoundingClientRect();
+            if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+                if (video.paused) {
+                    video.play();
+                }
+            }
+        });
+    </script>
 </body>
+</html>
